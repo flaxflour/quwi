@@ -18,5 +18,5 @@
   "not_active": "Not Active",
   "confirm": "Confirm",
   "close": "Close",
-  "name_change": "Project name was successfully changed"
+  "name_changed": "Project name was successfully changed"
 }
