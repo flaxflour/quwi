@@ -1,13 +1,9 @@
 <template>
   <div class="login">
-    <div class="logo__wrap">
-      <img class="logo" src="~/static/logo.png" alt="quwi logo" />
-      <p>Quwi</p>
-    </div>
     <div class="login__inner">
-      <div class="login__greeting">
-        <p class="greeting_text">{{ $i18n.t("greeting_text") }}</p>
-        <p class="greeting_subtext">{{ $i18n.t("greeting_subtext") }}</p>
+      <div class="logo__wrap">
+        <img class="logo" src="~/static/logo.png" alt="quwi logo" />
+        <p class="logo_text">Quwi</p>
       </div>
       <form class="login__form">
         <ui-form-input
@@ -43,8 +39,11 @@
           :loading="loading"
           :disabled="$v.$invalid"
           @click.prevent="tryLogin"
-          >{{ $i18n.t("sign_in") }}</ui-button
+          >{{ $i18n.t("login") }}</ui-button
         >
+        <nuxt-link to="/forgot" class="forgot__password">{{
+          $i18n.t("forgot_password")
+        }}</nuxt-link>
       </form>
     </div>
   </div>
@@ -61,6 +60,9 @@ export default {
     UiFormInput,
     UiButton,
   },
+
+  layout: "login",
+
   data() {
     return {
       loading: false,
@@ -137,12 +139,18 @@ export default {
   .logo__wrap {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 1rem;
     font-weight: bold;
     font-size: 1.5rem;
 
     .logo {
       margin-right: 0.5rem;
+
+      &_text {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
     }
   }
 
@@ -151,33 +159,8 @@ export default {
     width: 100%;
     background-color: rgb(255, 255, 255);
     padding: 2rem;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     box-shadow: hsla(210, 8%, 62%, 0.2) 0px 8px 24px;
-  }
-
-  &__greeting {
-    margin-bottom: 1.75rem;
-
-    .greeting {
-      &_text,
-      &_subtext {
-        padding: 0;
-        margin: 0;
-        text-align: center;
-      }
-
-      &_text {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: var(--greeting-text);
-        line-height: 1.75;
-      }
-
-      &_subtext {
-        font-size: 0.75rem;
-        color: var(--greeting-subtext);
-      }
-    }
   }
 
   &__form {
@@ -197,6 +180,13 @@ export default {
         width: 1.5rem;
         height: 1.5rem;
       }
+    }
+
+    .forgot__password {
+      color: var(--accent);
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      text-align: center;
     }
   }
 }

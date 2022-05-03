@@ -5,10 +5,7 @@
     </nuxt-link>
     <div class="header__actions">
       <button class="header_action" @click="$nuxt.refresh">
-        {{ $i18n.t("projects") }}
-      </button>
-      <button class="header_action" @click="logout">
-        {{ $i18n.t("logout") }}
+        {{ $i18n.t("sign_up") }}
       </button>
     </div>
   </header>

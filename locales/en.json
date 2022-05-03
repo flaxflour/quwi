@@ -1,13 +1,12 @@
 {
-  "sign_in": "Sign In",
-  "greeting_text": "Welcome Back",
-  "greeting_subtext": "Enter your credentials to access your account.",
+  "login": "Login",
+  "sign_up": "Signup",
   "action": {
     "show": "Show",
     "hide": "Hide"
   },
-  "enter_email": "Enter your email",
-  "enter_password": "Enter your password",
+  "enter_email": "email",
+  "enter_password": "password",
   "projects": "projects",
   "logout": "Logout",
   "error": "Something get wrong",
@@ -18,5 +17,6 @@
   "not_active": "Not Active",
   "confirm": "Confirm",
   "close": "Close",
-  "name_changed": "Project name was successfully changed"
+  "name_changed": "Project name was successfully changed",
+  "forgot_password": "Forgot password?"
 }
