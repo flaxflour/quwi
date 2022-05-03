@@ -1,0 +1,22 @@
+{
+  "sign_in": "Sign In",
+  "greeting_text": "Welcome Back",
+  "greeting_subtext": "Enter your credentials to access your account.",
+  "action": {
+    "show": "Show",
+    "hide": "Hide"
+  },
+  "enter_email": "Enter your email",
+  "enter_password": "Enter your password",
+  "projects": "projects",
+  "logout": "Logout",
+  "error": "Something get wrong",
+  "info_week": "time this week",
+  "info_month": "this month",
+  "info_total": "total",
+  "active": "Active",
+  "not_active": "Not Active",
+  "confirm": "Confirm",
+  "close": "Close",
+  "name_change": "Project name was successfully changed"
+}
