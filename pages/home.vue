@@ -1,6 +1,11 @@
 <template>
   <div class="container">
-    <Projects :projects="projects" @fetch-projects="fetchProjects" />
+    <template v-if="projects.length === 0">
+      <p class="empty">{{ $i18n.t("empty") }}</p>
+    </template>
+    <template v-else>
+      <projects :projects="projects" @fetch-projects="fetchProjects" />
+    </template>
   </div>
 </template>
 
@@ -50,5 +55,9 @@ export default {
   flex-grow: 1;
   padding: 4rem 0;
   background-color: #f4f4f4;
+
+  .empty {
+    text-align: center;
+  }
 }
 </style>

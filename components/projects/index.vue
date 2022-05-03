@@ -1,6 +1,6 @@
 <template>
   <div class="projects">
-    <Project
+    <project
       v-for="project in projects"
       :key="project.id"
       :project="project"
@@ -12,7 +12,7 @@
         ref="inputNameRef"
         label="Name"
         type="text"
-        :placeholder="$t('enter_password')"
+        :placeholder="$t('enter_name')"
       />
     </modal>
   </div>
@@ -67,6 +67,9 @@ export default {
     },
 
     async changeName() {
+      const isNameEmpty = this.projectName.trim().length === 0;
+      if (isNameEmpty) return;
+
       await this.$axios
         .post(`projects-manage/update?id=${this.projectId}`, {
           name: this.projectName,

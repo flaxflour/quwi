@@ -7,6 +7,7 @@
   },
   "enter_email": "email",
   "enter_password": "password",
+  "enter_name": "name",
   "projects": "projects",
   "logout": "Logout",
   "error": "Something get wrong",
@@ -18,5 +19,6 @@
   "confirm": "Confirm",
   "close": "Close",
   "name_changed": "Project name was successfully changed",
-  "forgot_password": "Forgot password?"
+  "forgot_password": "Forgot password?",
+  "empty": "Empty"
 }
